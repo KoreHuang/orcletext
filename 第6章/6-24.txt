@@ -1,0 +1,1 @@
+SQL> select replace('Bad Luck Bad Gril','Bad','Good') from dual;

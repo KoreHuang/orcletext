@@ -1,0 +1,4 @@
+SQL> select e.empno,e.ename,d.dname
+  2  from emp e inner join dept d
+  3  on e.deptno = d.deptno
+  4  where length(e.ename) > 5;

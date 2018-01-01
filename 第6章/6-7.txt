@@ -1,0 +1,13 @@
+SQL> set serveroutput on
+SQL> declare
+       var_name1 varchar2(50);						--定义两个字符串变量
+       var_name2 varchar2(50);
+     begin
+       var_name1:='East';							--给两个字符串变量赋值
+       var_name2:='xiaoke';
+       if length(var_name1) < length(var_name2) then	--比较两个字符串的长度大小
+         /*输出比较后的结果*/
+         dbms_output.put_line('字符串“'||var_name1||'”的长度比字符串“'||var_name2||'”的长度小');
+       end if;
+     end;
+     /											--执行代码

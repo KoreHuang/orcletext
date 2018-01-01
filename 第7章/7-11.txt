@@ -1,0 +1,10 @@
+1.SQL> select * from dept_temp;
+2.SQL> savepoint sp01;
+3.SQL> insert into dept_temp values(15, '采购部', '成都');
+4.SQL> savepoint sp02;
+5.SQL> delete dept_temp where deptno = 57;
+  SQL> select * from dept_temp;
+6.SQL> rollback to sp02;
+  SQL> select * from dept_temp;
+7.SQL> rollback to sp01;
+  SQL> select * from dept_temp;

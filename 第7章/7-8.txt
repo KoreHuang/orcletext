@@ -1,0 +1,17 @@
+SQL> CREATE TABLE dropped_objects
+(
+object_name varchar2(30),
+object_type varchar2(20),
+dropped_date date
+);
+
+SQL> CREATE OR REPLACE TRIGGER dropped_obj_trigger
+BEFORE DROP ON SYSTEM.SCHEMA
+BEGIN
+INSERT INTO dropped_objects
+VALUES(ora_dict_obj_name,ora_dict_obj_type,SYSDATE);
+END;
+
+SQL> DROP TABLE table1;
+SQL> DROP TABLE table2;
+SQL> SELECT * FROM dropped_objects;

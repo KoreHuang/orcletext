@@ -1,0 +1,8 @@
+SQL> set serveroutput on
+SQL> declare
+       avg_pay number;								--定义变量，存储函数返回值
+     begin
+       avg_pay:=get_avg_pay(10);					--调用函数，并获取返回值
+       dbms_output.put_line('平均工资是：'||avg_pay);	--输出返回值，即员工平均工资
+     end;
+     /

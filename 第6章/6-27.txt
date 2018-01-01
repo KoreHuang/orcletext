@@ -1,0 +1,1 @@
+SQL> select count(empno) as 员工总数,round(avg(sal),2) as 平均工资 from emp;

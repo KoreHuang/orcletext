@@ -1,0 +1,1 @@
+SQL> execute pro_insertDept;

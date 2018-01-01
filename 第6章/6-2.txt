@@ -1,0 +1,1 @@
+con_day constant integer:=365;

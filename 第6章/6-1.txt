@@ -1,0 +1,1 @@
+var_countryname varchar2(50):='ÖÐ¹ú';

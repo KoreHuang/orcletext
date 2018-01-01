@@ -1,0 +1,1 @@
+SQL> select instr('oracle 11g','1',3,2) abc from dual;

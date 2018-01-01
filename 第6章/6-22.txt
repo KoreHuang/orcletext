@@ -1,0 +1,1 @@
+SQL> select empno,lower(ename) from emp where lower(ename) like 'j%';

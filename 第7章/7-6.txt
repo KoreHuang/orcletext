@@ -1,0 +1,13 @@
+SQL> connect system/Ming12
+
+SQL> grant create view to scott;
+
+
+
+SQL> connect scott/tiger
+
+
+SQL> create view view_emp_dept
+  2    as select empno,ename,dept.deptno,dname,job,hiredate
+  3       from emp,dept
+  4       where emp.deptno = dept.deptno;

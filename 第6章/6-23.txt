@@ -1,0 +1,1 @@
+SQL> select ltrim('####East####','#'),rtrim('East    '),trim('#' from '####East###') from dual;

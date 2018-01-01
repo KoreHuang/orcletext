@@ -1,0 +1,12 @@
+SQL> set serveroutput on
+SQL> begin
+       update emp
+       set sal=sal*(1+0.2)
+       where job='SALESMAN';					--把销售员的工资上调20%
+       if sql%notfound then						--若update语句没有影响到任何一行数据 
+         dbms_output.put_line('没有雇员需要上调工资');
+       else									--若update语句至少影响到一行数据
+         dbms_output.put_line('有'||sql%rowcount||'个雇员工资上调20%');
+       end if;
+     end;
+     /

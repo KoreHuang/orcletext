@@ -1,0 +1,5 @@
+SQL> insert into jobs_temp values('DESIGN','设计人员',3000,5000);
+
+
+
+SQL> commit;

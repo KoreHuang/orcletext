@@ -1,0 +1,20 @@
+SQL> set serveroutput on
+SQL> declare
+       season int:=3;								--定义整形变量并赋值
+       aboutInfo varchar2(50);						--存储月份信息
+     begin
+       case season									--判断季度
+         when 1 then								--若是1季度
+           aboutInfo := season||'季度包括1，2，3月份';
+         when 2 then								--若是2季度
+           aboutInfo := season||'季度包括4，5，6月份';
+         when 3 then								--若是3季度
+           aboutInfo := season||'季度包括7，8，9月份';
+         when 4 then								--若是4季度
+           aboutInfo := season||'季度包括10，11，12月份';
+         else										--若季度不合法
+           aboutInfo := season||'季节不合法';
+       end case;
+       dbms_output.put_line(aboutinfo); 			--输出该季度所包含的月份信息
+     end;
+     /

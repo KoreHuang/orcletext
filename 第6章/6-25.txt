@@ -1,0 +1,1 @@
+SQL> select substr('MessageBox',8,3) from dual;
